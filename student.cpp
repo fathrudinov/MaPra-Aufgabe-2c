@@ -1,6 +1,8 @@
 // Copyright (c) 2022, The MaPra Authors.
 #include "mapra_test.h"
 #include "student.h"
+#include <cstring>
+#include <fstream>
 
 // Eingabeoperator ">>"
 std::istream &mapra::operator>>(std::istream &s, mapra::Student &a)
@@ -45,4 +47,9 @@ bool mapra::operator==(const mapra::Student &a, const mapra::Student &b)
 bool mapra::operator!=(const mapra::Student &a, const mapra::Student &b)
 {
   return !(a == b);
+}
+
+int main()
+{
+    return 0;
 }
