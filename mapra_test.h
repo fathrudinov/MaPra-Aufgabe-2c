@@ -8,6 +8,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <sstream>
 
 namespace mapra
 {
@@ -88,21 +89,21 @@ namespace mapra
   };
 
   template <typename T>
-  void Read(std ::ifstream &ifs, std ::vector<T> &array)
+  void Read(std::ifstream &ifs, std::vector<T> &array)
   {
-    T c_line;
-    for (std::string line; getline(ifs, line);)
+    T element;
+    while (!ifs.fail())
     {
-      std::istringstream iss(line);
-      iss >> c_line;
-      array.push_back(c_line);
+      ifs >> element;
+      if (ifs.good() && !ifs.eof())
+        array.push_back(element);
     }
   }
 
   template <typename T>
   void Print(std ::ostream &os, std ::vector<T> &array)
   {
-    for (unsigned int i = 0; i < array.size(); i++)
+    for (auto i = 0; i < array.size(); i++)
     {
       os << array[i] << "\n";
     }

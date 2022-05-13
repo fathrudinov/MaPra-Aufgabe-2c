@@ -1,15 +1,15 @@
 CXXFLAGS = -std=c++17 -Wall -Wextra -Wpedantic -O2 -fno-inline -fPIC -fPIE
 
-sort: sort.o unit.o student.o
+test: unit.o student.o Hauptprogramm.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
-
-sort.o: sort.cpp student.h
-	$(CXX) $(CXXFLAGS) -c $<
 
 student.o: student.cpp student.h
 	$(CXX) $(CXXFLAGS) -c $<
 
+Hauptprogramm.o: Hauptprogramm.cpp sort.h mapra_test.h
+	$(CXX) $(CXXFLAGS) -c Hauptprogramm.cpp
+
 clean:
-	rm -f student.o sort.o sort
+	rm -f student.o Hauptprogramm.o test
 
 .PHONY: clean

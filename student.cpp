@@ -48,8 +48,3 @@ bool mapra::operator!=(const mapra::Student &a, const mapra::Student &b)
 {
   return !(a == b);
 }
-
-int main()
-{
-    return 0;
-}
