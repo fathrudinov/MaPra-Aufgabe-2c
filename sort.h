@@ -1,18 +1,16 @@
-#include <iostream>
 #include <vector>
 
-void bubbleSort(std::vector<unsigned int>& array);
+template<typename T>
+void bubbleSort(std::vector<T>& array);
 
-void selectionSort(std::vector<unsigned int>& array);
+template<typename T>
+void selectionSort(std::vector<T>& array);
 
-void insertionSort(std::vector<unsigned int>& array);
+template<typename T>
+void merge(std::vector<T>& array,unsigned int left,unsigned int middle,unsigned int right);
 
-void heapSort(std::vector<unsigned int>& array);
+template <typename T>
+void mergeSort_help(std::vector<T>& array,unsigned int left,unsigned int right);
 
-void quickSort(std::vector<unsigned int>& array);
-
-void medianQuickSort(std::vector<unsigned int>& array);
-
-void mergeSort(std::vector<unsigned int>& array);
-
-
+template <typename T>
+void mergeSort(std::vector<T>& array);
