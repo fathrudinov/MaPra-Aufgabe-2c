@@ -23,9 +23,11 @@ int main()
     switch (algo)
     {
     case 1:
+        std::cout << "########################################\ngegebene Liste:\n";
         Read(file, vect);
         Print(std::cout, vect);
         bubbleSort(vect);
+        std::cout << "########################################\nsortierte Liste:\n";
         Print(std::cout, vect);
         CheckSolution(vect);
         Print(std::cout, vect);
