@@ -1,8 +1,10 @@
 #include <iostream>
 #include "sort_template_tests.h"
 
+// wurde mit VIM bearbeitet
 
-int main()
+
+ int main()
 {
     unsigned int algo;
 

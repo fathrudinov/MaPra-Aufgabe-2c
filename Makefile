@@ -4,10 +4,10 @@ test: unit.o student.o main.o
 	$(CXX) $(CXXFLAGS) $^ -o $@ 
 
 student.o: student.cpp student.h
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
 main.o: main.cpp sort_template.h mapra_test.h sort_template_tests.h
-	$(CXX) $(CXXFLAGS) -c $<
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
 
 clean:
 	rm -f student.o main.o test
